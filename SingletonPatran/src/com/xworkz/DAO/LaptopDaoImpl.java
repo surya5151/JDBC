@@ -21,7 +21,8 @@ public class LaptopDaoImpl implements LaptopDAO {
 			
 			Statement statement = connection.createStatement();		
 			
-			statement.executeUpdate(insertQuery);
+			int noOfRowsAffected=statement.executeUpdate(insertQuery);
+			System.out.println(noOfRowsAffected); 
 			
 		} catch (Exception Exception) {
 			System.out.println("inside catch block sql exception");

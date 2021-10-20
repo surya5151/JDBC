@@ -36,8 +36,8 @@ public class LaptopDaoImpl implements LaptopDAO {
 			preparedStatement.setInt(9, laptopEntity.getWEIGHT());
 			preparedStatement.setBoolean(10, laptopEntity.isIS_CD_SUPPORT());
 
-			int noOfRowsAffected=preparedStatement.executeUpdate();
-			preparedStatement.close();			
+			int noOfRowsAffected = preparedStatement.executeUpdate();
+			preparedStatement.close();
 			System.out.println(noOfRowsAffected);
 			System.out.println("save is done");
 
@@ -182,7 +182,7 @@ public class LaptopDaoImpl implements LaptopDAO {
 
 				laptopEntity = new LaptopEntity(ID, BRAND, COLOR, PRICE, RAM, PROCESSOR, IS_CAMERA_PRESENT, SCREEN_SIZE,
 						WEIGHT, IS_CD_SUPPORT);
-				
+
 				container.add(laptopEntity);
 			}
 			return container;
